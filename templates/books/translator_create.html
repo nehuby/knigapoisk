@@ -1,0 +1,13 @@
+{% extends "card.html" %}
+{% load i18n crispy_forms_tags %}
+{% block title %}
+  {% trans "Create a new translator" %}
+{% endblock title %}
+{% block card_body %}
+  <div class="fs-3 text-center">{% trans "Create a new translator" %}</div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-primary w-100">{% trans "Create translator" %}</button>
+  </form>
+{% endblock card_body %}

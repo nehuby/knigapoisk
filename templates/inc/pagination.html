@@ -1,0 +1,23 @@
+{% if page_range %}
+  {% if reviews.has_other_pages %}
+    <ul class="pagination justify-content-center my-0">
+      {% for page in page_range %}
+        {% if page == reviews.number %}
+          <li class="page-item">
+            <span class="page-link active">{{ page }}</span>
+          </li>
+        {% else %}
+          {% if page == reviews.paginator.ELLIPSIS %}
+            <li class="page-item">
+              <span class="page-link active">{{ page }}</span>
+            </li>
+          {% else %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page }}">{{ page }}</a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endif %}

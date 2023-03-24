@@ -1,0 +1,28 @@
+services:
+  django:
+    build:
+      context: .
+      args:
+        - GID=${GID:-1000}
+        - UID=${UID:-1000}
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: database
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  local_postgres_data:

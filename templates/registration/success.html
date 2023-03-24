@@ -1,0 +1,8 @@
+{% extends "card.html" %}
+{% load i18n crispy_forms_tags %}
+{% block title %}
+    {% trans "Success" %}
+{% endblock title %}
+{% block card_body %}
+    <div class="text-center">{% trans "Congrats! you just verified your account" %}</div>
+{% endblock card_body %}

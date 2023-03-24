@@ -1,0 +1,83 @@
+{% load i18n %}
+<nav class="navbar bg-white navbar-expand-lg border-bottom">
+  <div class="container">
+    <a class="navbar-brand text-primary" href="{% url 'books' %}"><i class="fa-solid fa-k"></i><i class="fa-solid fa-n"></i><i class="fa-solid fa-i"></i><i class="fa-solid fa-g"></i><i class="fa-solid fa-a"></i><i class="fa-solid fa-p"></i><i class="fa-solid fa-o"></i><i class="fa-solid fa-i"></i><i class="fa-solid fa-s"></i><i class="fa-solid fa-k"></i></a>
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          {% url "books" as books_url %}
+          <a class="nav-link {% if request.path == books_url %} active{% endif %}"
+             href="{{ books_url }}"><i class="fa-solid fa-book"></i> {% trans "Books" %}</a>
+        </li>
+        <li class="nav-item">
+          {% url "authors" as authors_url %}
+          <a class="nav-link {% if request.path == authors_url %} active{% endif %}"
+             href="{{ authors_url }}"><i class="fa-solid fa-book-skull"></i> {% trans "Authors" %}</a>
+        </li>
+        <li class="nav-item">
+          {% url "genres" as genres_url %}
+          <a class="nav-link {% if request.path == genres_url %} active{% endif %}"
+             href="{{ genres_url }}"><i class="fa-solid fa-book-atlas"></i> {% trans "Genres" %}</a>
+        </li>
+        {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            {% url "my_books" as my_books_url %}
+            <a class="nav-link {% if request.path == my_books_url %} active{% endif %}"
+               href="{{ my_books_url }}"><i class="fa-solid fa-book-bookmark"></i> {% trans "My books" %}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               href="#"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              <i class="fa-solid fa-square-plus"></i> {% trans "Create" %}
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                {% url "book_create" as book_create_url %}
+                <a class="dropdown-item {% if request.path == book_create_url %} active{% endif %}"
+                   href="{{ book_create_url }}">{% trans "Book" %}</a>
+              </li>
+              <li>
+                {% url "author_create" as author_create_url %}
+                <a class="dropdown-item {% if request.path == author_create_url %} active{% endif %}"
+                   href="{{ author_create_url }}">{% trans "Author" %}</a>
+              </li>
+              <li>
+                {% url "genre_create" as genre_create_url %}
+                <a class="dropdown-item {% if request.path == genre_create_url %} active{% endif %}"
+                   href="{{ genre_create_url }}">{% trans "Genre" %}</a>
+              </li>
+              <li>
+                {% url "translator_create" as translator_create_url %}
+                <a class="dropdown-item {% if request.path == translator_create_url %} active{% endif %}"
+                   href="{{ translator_create_url }}">{% trans "Translator" %}</a>
+              </li>
+            </ul>
+          </li>
+        {% endif %}
+        {% if request.user.is_staff %}
+          <li class="nav-item">
+            <a href="{% url 'admin:index' %}" class="nav-link"><i class="fa-solid fa-lock"></i> {% trans "Admin panel" %}</a>
+          </li>
+        {% endif %}
+      </ul>
+      {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="btn btn-sm btn-primary"><i class="fa-solid fa-right-from-bracket"></i> {% trans "Sign out" %}</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="btn btn-sm btn-outline-primary me-2">{% trans "Log in" %}</a>
+        <a href="{% url 'signup' %}" class="btn btn-sm btn-primary">{% trans "Sign up" %}</a>
+      {% endif %}
+    </div>
+  </div>
+</nav>

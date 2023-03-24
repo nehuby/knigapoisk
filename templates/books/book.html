@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% load i18n crispy_forms_tags %}
+{% block title %}
+  {% trans "Book information" %}
+{% endblock title %}
+{% block content %}
+  <div class="row justify-content-center mt-2">
+    <div class="col-xl-6">
+      <div class="card mb-2">
+        <div class="card-body">
+          <div class="clearfix">
+            <div class="col-md-2">
+              <img src="{{ book.photo.url }}"
+                   alt="book.name"
+                   class="float-md-start rounded me-md-3"
+                   width="160"
+                   height="250"/>
+            </div>
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <div class="fs-2 mt-0">{{ book.name }}</div>
+              </div>
+              <div class="fs-5">
+                <div>
+                  {% blocktranslate with author=book.authors.all|pluralize %}Author{{ author }}:{% endblocktranslate %}
+                  {% for author in book.authors.all %}
+                    {% if forloop.last %}
+                      {{ author.name }}
+                    {% else %}
+                      {{ author.name }},
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                <div>
+                  {% blocktranslate with genre=book.genres.all|pluralize %}Genre{{ genre }}:{% endblocktranslate %}
+                  {% for genre in book.genres.all %}{{ genre.name }}{% endfor %}
+                </div>
+                <div>
+                  {% trans "Year of publication:" %}
+                  {{ book.year_of_publication }}
+                </div>
+                <div>
+                  {% trans "Number of pages:" %}
+                  {{ book.number_of_pages }}
+                </div>
+                <div>
+                  {% trans "Language:" %}
+                  {{ book.language }}
+                </div>
+                <div>
+                  {% if book.translators.all %}
+                    {% blocktranslate with translator=book.translator.all|pluralize %}Translator{{ translator }}:{% endblocktranslate %}
+                    {% for translator in book.translators.all %}{{ translator.name }}{% endfor %}
+                  {% endif %}
+                </div>
+                <div>{% trans "Score:" %} {{ rate }}</div>
+                <div class="fs-6">{{ book.description }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if request.user.is_authenticated %}
+        <button type="button"
+                class="btn btn-primary w-100 mb-2"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+          {% trans "Create a new review" %}
+        </button>
+        <div class="modal fade"
+             id="staticBackdrop"
+             data-bs-backdrop="static"
+             data-bs-keyboard="false"
+             tabindex="-1"
+             aria-labelledby="staticBackdropLabel"
+             aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-title fs-5" id="staticBackdropLabel">{% trans "Create a new review" %}</div>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+              </div>
+              <form method="post">
+                <div class="modal-body">
+                  {% csrf_token %}
+                  {{ form|crispy }}
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary w-100">{% trans "Create review" %}</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if reviews %}
+        <div class="card mb-2">
+          <div class="card-body">
+            <div class="text-center fs-3">{% trans "Reviews" %}</div>
+            {% for review in reviews %}
+              <div class="card mb-2">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col text-start">
+                      <div>{{ review.name }}</div>
+                    </div>
+                    {% if review.name == request.user %}
+                      <div class="col text-end">
+                        <a href="{% url 'review_edit' review.id %}"
+                           class="text-primary text-decoration-none"
+                           data-bs-toggle="modal"
+                           data-bs-target="#review_edit{{ review.id }}_modal"><i class="fa-solid fa-pen-to-square"></i> {% trans "Edit" %}</a>
+                        <a href="{% url 'review_delete' review.id %}"
+                           class="text-danger text-decoration-none"
+                           data-bs-toggle="modal"
+                           data-bs-target="#review{{ review.id }}_modal"><i class="fa-solid fa-trash"></i> {% trans "Delete" %}</a>
+                        <form method="post" action="{% url 'review_edit' review.id %}">
+                          {% csrf_token %}
+                          <div class="modal fade"
+                               id="review_edit{{ review.id }}_modal"
+                               data-bs-backdrop="static"
+                               data-bs-keyboard="false"
+                               tabindex="-1"
+                               aria-labelledby="staticBackdropLabel"
+                               aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <div class="modal-title fs-5" id="staticBackdropLabel">{% trans "Edit review" %}</div>
+                                  <button type="button"
+                                          class="btn-close"
+                                          data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="text-start fs-6">{{ form|crispy }}</div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="submit" class="btn btn-primary w-100" data-bs-dismiss="modal">{% trans "Edit" %}</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        <form method="post" action="{% url 'review_delete' review.id %}">
+                          {% csrf_token %}
+                          <div class="modal fade"
+                               id="review{{ review.id }}_modal"
+                               data-bs-backdrop="static"
+                               data-bs-keyboard="false"
+                               tabindex="-1"
+                               aria-labelledby="staticBackdropLabel"
+                               aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <div class="modal-title fs-5" id="staticBackdropLabel">{% trans "Delete review" %}</div>
+                                  <button type="button"
+                                          class="btn-close"
+                                          data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="text-start fs-6">{% trans "Do you really want to delete the review?" %}</div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="submit" class="btn btn-danger w-100" data-bs-dismiss="modal">{% trans "Delete" %}</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div>{{ review.text }}</div>
+                  <div class="text-end">{{ review.date }}</div>
+                </div>
+              </div>
+            {% endfor %}
+            {% include "inc/pagination.html" %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock content %}

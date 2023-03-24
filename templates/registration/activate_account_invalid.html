@@ -1,0 +1,5 @@
+{% extends "card.html" %}
+{% load i18n crispy_forms_tags %}
+{% block card_body %}
+    <div class="text-center">{% trans "This email confirmation link has expired or is invalid." %}</div>
+{% endblock card_body %}

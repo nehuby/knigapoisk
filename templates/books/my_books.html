@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+  {% trans "My books" %}
+{% endblock title %}
+{% block content %}
+  {% for book in books %}
+    {% if forloop.first %}<div class="row justify-content-center mt-2">{% endif %}
+    <div class="col-lg-6 g-2 mt-0 mb-2 col-xl-3">
+      <a href="{% url 'book' book.id %}"
+         class="text-dark text-decoration-none">
+        <div class="card text-center">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <img src="{{ book.photo.url }}"
+                     class="rounded"
+                     width="160"
+                     height="250"
+                     alt="{{ book.name }}"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="card-text">
+                  <div>{{ book.name }}</div>
+                  <div class="text-muted">
+                    {% for author in book.authors.all %}
+                      {% if forloop.first %}{{ author.name }}{% endif %}
+                    {% endfor %}
+                  </div>
+                  <a class="text-primary text-decoration-none"
+                     href="{% url 'book_edit' book.id %}"><i class="fa-solid fa-pen-to-square"></i> {% trans "Edit" %}</a>
+                  <a href="{% url 'book_delete' book.id %}"
+                     class="text-danger text-decoration-none"
+                     data-bs-toggle="modal"
+                     data-bs-target="#book{{ book.id }}_modal"><i class="fa-solid fa-trash"></i> {% trans "Delete" %}</a>
+                  <form method="post" action="{% url 'book_delete' book.id %}">
+                    {% csrf_token %}
+                    <div class="modal fade"
+                         id="book{{ book.id }}_modal"
+                         data-bs-backdrop="static"
+                         data-bs-keyboard="false"
+                         tabindex="-1"
+                         aria-labelledby="staticBackdropLabel"
+                         aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <div class="modal-title fs-5" id="staticBackdropLabel">{% trans "Delete book" %}</div>
+                            <button type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="fs-6">
+                              {% trans "Do you really want to delete the book " %} - <strong>{{ book.name }}</strong>?
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger w-100" data-bs-dismiss="modal">{% trans "Delete" %}</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% if forloop.counter|divisibleby:4 %}
+    </div>
+    <div class="row">
+    {% endif %}
+    {% if forloop.last %}</div>{% endif %}
+  {% endfor %}
+{% endblock content %}

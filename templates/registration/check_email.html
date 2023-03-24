@@ -1,0 +1,11 @@
+{% extends "card.html" %}
+{% load i18n crispy_forms_tags %}
+{% block title %}
+    {% trans "Verify your email address" %}
+{% endblock title %}
+{% block card_body %}
+    <div class="fs-3 text-center">{% trans "Verify your email address" %}</div>
+    <div class="my-2">
+        {% trans "We have sent you an email for verification. Follow the link provided to complete the registration process. If you don't see the verification email in your main mailbox, check your spam folder." %}
+    </div>
+{% endblock card_body %}

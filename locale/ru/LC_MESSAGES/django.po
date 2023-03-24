@@ -1,0 +1,888 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-12 13:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: books/forms.py:65 books/forms.py:66 books/templates/books/books.html:15
+msgid "Search"
+msgstr "Найти"
+
+#: books/languages.py:4
+msgid "Azerbaijani"
+msgstr "Азербайджанский"
+
+#: books/languages.py:5
+msgid "Aymara"
+msgstr "Аймара"
+
+#: books/languages.py:6
+msgid "Albanian"
+msgstr "Албанский"
+
+#: books/languages.py:7
+msgid "Amharic"
+msgstr "Амхарский"
+
+#: books/languages.py:8 config/settings.py:117
+msgid "English"
+msgstr "Английский"
+
+#: books/languages.py:9
+msgid "Arabic"
+msgstr "Арабский"
+
+#: books/languages.py:10
+msgid "Armenian"
+msgstr "Армянский"
+
+#: books/languages.py:11
+msgid "Assamese"
+msgstr "Ассамский"
+
+#: books/languages.py:12
+msgid "Afrikaans"
+msgstr "Африканский"
+
+#: books/languages.py:13
+msgid "Bambara"
+msgstr "Бамана"
+
+#: books/languages.py:14
+msgid "Basque"
+msgstr "Баскский"
+
+#: books/languages.py:15
+msgid "Belarusian"
+msgstr "Белорусский"
+
+#: books/languages.py:16
+msgid "Bengali"
+msgstr "Бенгальский"
+
+#: books/languages.py:17
+msgid "Burmese"
+msgstr "Бирманский"
+
+#: books/languages.py:18
+msgid "Bulgarian"
+msgstr "Болгарский"
+
+#: books/languages.py:19
+msgid "Bosnian"
+msgstr "Боснийский"
+
+#: books/languages.py:20
+msgid "Bhojpuri"
+msgstr "Бходжпури"
+
+#: books/languages.py:21
+msgid "Welsh"
+msgstr "Валлийский"
+
+#: books/languages.py:22
+msgid "Hungarian"
+msgstr "Венгерский"
+
+#: books/languages.py:23
+msgid "Vietnamese"
+msgstr "Вьетнамский"
+
+#: books/languages.py:24
+msgid "Hawaiian"
+msgstr "Гавайский"
+
+#: books/languages.py:25
+msgid "Galician"
+msgstr "Галисийский"
+
+#: books/languages.py:26
+msgid "Greek"
+msgstr "Греческий"
+
+#: books/languages.py:27
+msgid "Georgian"
+msgstr "Грузинский"
+
+#: books/languages.py:28
+msgid "Guarani"
+msgstr "Гуарани"
+
+#: books/languages.py:29
+msgid "Gujarati"
+msgstr "Гуджарати"
+
+#: books/languages.py:30
+msgid "Danish"
+msgstr "Датский"
+
+#: books/languages.py:31
+msgid "Dogri"
+msgstr "Догри"
+
+#: books/languages.py:32
+msgid "Zulu"
+msgstr "Зулу"
+
+#: books/languages.py:33
+msgid "Hebrew"
+msgstr "Еврейский"
+
+#: books/languages.py:34
+msgid "Igbo"
+msgstr "Игбо"
+
+#: books/languages.py:35
+msgid "Yiddish"
+msgstr "Идиш"
+
+#: books/languages.py:36
+msgid "Ilokan"
+msgstr "Илокан"
+
+#: books/languages.py:37
+msgid "Indonesian"
+msgstr "Индонезийский"
+
+#: books/languages.py:38
+msgid "Irish"
+msgstr "Ирландский"
+
+#: books/languages.py:39
+msgid "Icelandic"
+msgstr "Исландский"
+
+#: books/languages.py:40
+msgid "Spanish"
+msgstr "Испанский"
+
+#: books/languages.py:41
+msgid "Italian"
+msgstr "Итальянский"
+
+#: books/languages.py:42
+msgid "Yoruba"
+msgstr "Йоруба"
+
+#: books/languages.py:43
+msgid "Kazakh"
+msgstr "Казахский"
+
+#: books/languages.py:44
+msgid "Kannada"
+msgstr "Каннадский"
+
+#: books/languages.py:45
+msgid "Catalan"
+msgstr "Каталонский"
+
+#: books/languages.py:46
+msgid "Quechua"
+msgstr "Кечуа"
+
+#: books/languages.py:47
+msgid "Kirghiz"
+msgstr "Киргизский"
+
+#: books/languages.py:48
+msgid "Chinese"
+msgstr "Китайский"
+
+#: books/languages.py:49
+msgid "Konkani"
+msgstr "Конкани"
+
+#: books/languages.py:50
+msgid "Korean"
+msgstr "Корейский"
+
+#: books/languages.py:51
+msgid "Corsican"
+msgstr "Корсиканский"
+
+#: books/languages.py:52
+msgid "Creole"
+msgstr "Креольский"
+
+#: books/languages.py:53
+msgid "Kurdish"
+msgstr "Курдский"
+
+#: books/languages.py:54
+msgid "Khmer"
+msgstr "Кхмер"
+
+#: books/languages.py:55
+msgid "Laotian"
+msgstr "Лаосский"
+
+#: books/languages.py:56
+msgid "Latin"
+msgstr "Латинский"
+
+#: books/languages.py:57
+msgid "Latvian"
+msgstr "Латвийский"
+
+#: books/languages.py:58
+msgid "Lingala"
+msgstr "Лингала"
+
+#: books/languages.py:59
+msgid "Lithuanian"
+msgstr "Литовский"
+
+#: books/languages.py:60
+msgid "Luganda"
+msgstr "Луганда"
+
+#: books/languages.py:61
+msgid "Luxembourgian"
+msgstr "Люксембургский"
+
+#: books/languages.py:62
+msgid "Maythili"
+msgstr "Майтили"
+
+#: books/languages.py:63
+msgid "Macedonian"
+msgstr "Македонский"
+
+#: books/languages.py:64
+msgid "Malagasy"
+msgstr "Малагасийский"
+
+#: books/languages.py:65
+msgid "Malay"
+msgstr "Малайский"
+
+#: books/languages.py:66
+msgid "Malayalam"
+msgstr "Малаялам"
+
+#: books/languages.py:67
+msgid "Maldivian"
+msgstr "Мальдивский"
+
+#: books/languages.py:68
+msgid "Maltese"
+msgstr "Мальтийский"
+
+#: books/languages.py:69
+msgid "Maori"
+msgstr "Маори"
+
+#: books/languages.py:70
+msgid "Marathi"
+msgstr "Маратхи"
+
+#: books/languages.py:71
+msgid "Meiteilon"
+msgstr "Мейтейлон"
+
+#: books/languages.py:72
+msgid "Mizo"
+msgstr "Мизо"
+
+#: books/languages.py:73
+msgid "Mongolian"
+msgstr "Монгольский"
+
+#: books/languages.py:74
+msgid "German"
+msgstr "Немецкий"
+
+#: books/languages.py:75
+msgid "Nepali"
+msgstr "Непальский"
+
+#: books/languages.py:76
+msgid "Dutch"
+msgstr "Голландский"
+
+#: books/languages.py:77
+msgid "Norwegian"
+msgstr "Норвежский"
+
+#: books/languages.py:78
+msgid "Punjabi"
+msgstr "Пенджабский"
+
+#: books/languages.py:79
+msgid "Persian"
+msgstr "Персидский"
+
+#: books/languages.py:80
+msgid "Polish"
+msgstr "Польский"
+
+#: books/languages.py:81
+msgid "Portuguese"
+msgstr "Португальский"
+
+#: books/languages.py:82
+msgid "Pashto"
+msgstr "Пушту"
+
+#: books/languages.py:83
+msgid "Rwanda"
+msgstr "Руанда"
+
+#: books/languages.py:84
+msgid "Romanian"
+msgstr "Румынский"
+
+#: books/languages.py:85 config/settings.py:117
+msgid "Russian"
+msgstr "Русский"
+
+#: books/languages.py:86
+msgid "Samoan"
+msgstr "Самоанский"
+
+#: books/languages.py:87
+msgid "Sanskrit"
+msgstr "Санскрит"
+
+#: books/languages.py:88
+msgid "Sebuan"
+msgstr "Себуанский"
+
+#: books/languages.py:89
+msgid "Sepedi"
+msgstr "Сепеди"
+
+#: books/languages.py:90
+msgid "Serbian"
+msgstr "Сербский"
+
+#: books/languages.py:91
+msgid "Sinhalese"
+msgstr "Сингальский"
+
+#: books/languages.py:92
+msgid "Sindhi"
+msgstr "Синдхи"
+
+#: books/languages.py:93
+msgid "Slovak"
+msgstr "Словацкий"
+
+#: books/languages.py:94
+msgid "Slovenian"
+msgstr "Словенский"
+
+#: books/languages.py:95
+msgid "Somali"
+msgstr "Сомалийский"
+
+#: books/languages.py:96
+msgid "Swahili"
+msgstr "Суахили"
+
+#: books/languages.py:97
+msgid "Sundanese"
+msgstr "Сунданский"
+
+#: books/languages.py:98
+msgid "Tajik"
+msgstr "Таджикский"
+
+#: books/languages.py:99
+msgid "Thai"
+msgstr "Тайский"
+
+#: books/languages.py:100
+msgid "Tamil"
+msgstr "Тамильский"
+
+#: books/languages.py:101
+msgid "Tatar"
+msgstr "Татарский"
+
+#: books/languages.py:102
+msgid "Telugu"
+msgstr "Телугу"
+
+#: books/languages.py:103
+msgid "Tigrinya"
+msgstr "Тигринья"
+
+#: books/languages.py:104
+msgid "Turkish"
+msgstr "Турецкий"
+
+#: books/languages.py:105
+msgid "Turkmen"
+msgstr "Туркменский"
+
+#: books/languages.py:106
+msgid "Uzbek"
+msgstr "Узбекский"
+
+#: books/languages.py:107
+msgid "Uighur"
+msgstr "Уйгурский"
+
+#: books/languages.py:108
+msgid "Ukrainian"
+msgstr "Украинский"
+
+#: books/languages.py:109
+msgid "Urdu"
+msgstr "Урду"
+
+#: books/languages.py:110
+msgid "Filipino"
+msgstr "Филиппинский"
+
+#: books/languages.py:111
+msgid "Finnish"
+msgstr "Финский"
+
+#: books/languages.py:112
+msgid "French"
+msgstr "Французский"
+
+#: books/languages.py:113
+msgid "Friesian"
+msgstr "Фризский"
+
+#: books/languages.py:114
+msgid "Hausa"
+msgstr "Хауса"
+
+#: books/languages.py:115
+msgid "Hindi"
+msgstr "Хинди"
+
+#: books/languages.py:116
+msgid "Hmong"
+msgstr "Хмонг"
+
+#: books/languages.py:117
+msgid "Croatian"
+msgstr "Хорватский"
+
+#: books/languages.py:118
+msgid "Czech"
+msgstr "Чешский"
+
+#: books/languages.py:119
+msgid "Swedish"
+msgstr "Шведский"
+
+#: books/languages.py:120
+msgid "Scottish"
+msgstr "Шотландия"
+
+#: books/languages.py:121
+msgid "Estonian"
+msgstr "Эстонский"
+
+#: books/languages.py:122
+msgid "Javanese"
+msgstr "Яванский"
+
+#: books/languages.py:123
+msgid "Japanese"
+msgstr "Японский"
+
+#: books/models.py:9 books/models.py:20 books/models.py:32 books/models.py:43
+#: books/models.py:76
+msgid "name"
+msgstr "название"
+
+#: books/models.py:12
+msgid "genre"
+msgstr "жанр"
+
+#: books/models.py:13 books/models.py:52
+msgid "genres"
+msgstr "жанры"
+
+#: books/models.py:21
+msgid "about"
+msgstr "об авторе"
+
+#: books/models.py:24
+msgid "author"
+msgstr "автор"
+
+#: books/models.py:25 books/models.py:55
+msgid "authors"
+msgstr "авторы"
+
+#: books/models.py:35
+msgid "translator"
+msgstr "переводчик"
+
+#: books/models.py:36 books/models.py:58
+msgid "translators"
+msgstr "переводчики"
+
+#: books/models.py:44
+msgid "description"
+msgstr "описание"
+
+#: books/models.py:45
+msgid "number of pages"
+msgstr "количество страниц"
+
+#: books/models.py:47
+msgid "year of publication"
+msgstr "год публикации"
+
+#: books/models.py:49
+msgid "language"
+msgstr "язык"
+
+#: books/models.py:50
+msgid "photo"
+msgstr "фото"
+
+#: books/models.py:62
+msgid "creator"
+msgstr "создатель"
+
+#: books/models.py:66 books/models.py:79
+msgid "book"
+msgstr "книга"
+
+#: books/models.py:67
+msgid "books"
+msgstr "книги"
+
+#: books/models.py:81
+msgid "text"
+msgstr "текст"
+
+#: books/models.py:82
+msgid "date"
+msgstr "дата"
+
+#: books/models.py:83
+msgid "score"
+msgstr "оценка"
+
+#: books/templates/books/author.html:4
+msgid "Author information"
+msgstr "Информация об авторе"
+
+#: books/templates/books/author_create.html:4
+#: books/templates/books/author_create.html:7
+msgid "Create a new author"
+msgstr "Создать нового автора"
+
+#: books/templates/books/author_create.html:11
+msgid "Create author"
+msgstr "Создать автора"
+
+#: books/templates/books/authors.html:4 templates/inc/nav.html:24
+msgid "Authors"
+msgstr "Авторы"
+
+#: books/templates/books/book.html:4
+msgid "Book information"
+msgstr "Информация о книге"
+
+#: books/templates/books/book.html:25 books/templates/books/book_create.html:16
+#: books/templates/books/book_edit.html:16
+#, python-format
+msgid "Author:"
+msgstr "Автор:"
+
+#: books/templates/books/book.html:35 books/templates/books/book_create.html:20
+#: books/templates/books/book_edit.html:20
+#, python-format
+msgid "Genre:"
+msgstr "Жанр:"
+
+#: books/templates/books/book.html:39
+msgid "Year of publication:"
+msgstr "Год публикации:"
+
+#: books/templates/books/book.html:43
+msgid "Number of pages:"
+msgstr "Количество страниц:"
+
+#: books/templates/books/book.html:47
+msgid "Language:"
+msgstr "Язык:"
+
+#: books/templates/books/book.html:52 books/templates/books/book_create.html:27
+#: books/templates/books/book_edit.html:27
+#, python-format
+msgid "Translator:"
+msgstr "Переводчик:"
+
+#: books/templates/books/book.html:56
+msgid "Score:"
+msgstr "Оценка:"
+
+#: books/templates/books/book.html:68 books/templates/books/book.html:80
+msgid "Create a new review"
+msgstr "Создать новый отзыв"
+
+#: books/templates/books/book.html:92
+msgid "Create review"
+msgstr "Создать отзыв"
+
+#: books/templates/books/book.html:102
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: books/templates/books/book.html:115 books/templates/books/book.html:142
+#: books/templates/books/my_books.html:33
+msgid "Edit"
+msgstr "Редактировать"
+
+#: books/templates/books/book.html:119 books/templates/books/book.html:170
+#: books/templates/books/my_books.html:37
+#: books/templates/books/my_books.html:62
+#: venv/lib/python3.10/site-packages/django/forms/formsets.py:496
+msgid "Delete"
+msgstr "Удалить"
+
+#: books/templates/books/book.html:132
+msgid "Edit review"
+msgstr "Редактировать отзыв"
+
+#: books/templates/books/book.html:160
+msgid "Delete review"
+msgstr "Удалить отзыв"
+
+#: books/templates/books/book.html:167
+msgid "Do you really want to delete the review?"
+msgstr "Вы действительно хотите удалить отзыв?"
+
+#: books/templates/books/book_create.html:7
+#: books/templates/books/book_create.html:10
+msgid "Create a new book"
+msgstr "Создать новую книгу"
+
+#: books/templates/books/book_create.html:31
+msgid "Create book"
+msgstr "Создать книгу"
+
+#: books/templates/books/book_edit.html:7
+#: books/templates/books/book_edit.html:10
+msgid "Edit book"
+msgstr "Редактировать книгу"
+
+#: books/templates/books/book_edit.html:32
+msgid "Save"
+msgstr "Сохранить"
+
+#: books/templates/books/books.html:4 templates/inc/nav.html:19
+msgid "Books"
+msgstr "Книги"
+
+#: books/templates/books/genre.html:4
+msgid "Genre information"
+msgstr "Информация о жанре"
+
+#: books/templates/books/genre_create.html:4
+#: books/templates/books/genre_create.html:7
+msgid "Create a new genre"
+msgstr "Создать новый жанр"
+
+#: books/templates/books/genre_create.html:11
+msgid "Create genre"
+msgstr "Создать жанр"
+
+#: books/templates/books/genres.html:4 templates/inc/nav.html:29
+msgid "Genres"
+msgstr "Жанры"
+
+#: books/templates/books/my_books.html:4 templates/inc/nav.html:35
+msgid "My books"
+msgstr "Мои книги"
+
+#: books/templates/books/my_books.html:50
+msgid "Delete book"
+msgstr "Удалить книгу"
+
+#: books/templates/books/my_books.html:58
+msgid "Do you really want to delete the book "
+msgstr "Вы действительно хотите удалить книгу "
+
+#: books/templates/books/translator_create.html:4
+#: books/templates/books/translator_create.html:7
+msgid "Create a new translator"
+msgstr "Создать нового переводчика"
+
+#: books/templates/books/translator_create.html:11
+msgid "Create translator"
+msgstr "Создать переводчика"
+
+#: books/validators.py:11
+msgid "The year of publication cannot be greater than the current"
+msgstr "Год публикации не может быть больше текущего"
+
+#: books/validators.py:14
+msgid "The year of publication cannot be that old"
+msgstr "Год публикации не может быть таким старым"
+
+#: books/views.py:183
+#, python-brace-format
+msgid "Created new author - {name}"
+msgstr "Создан новый автор - {name}"
+
+#: templates/base.html:20
+msgid "KnigaPoisk"
+msgstr "КнигаПоиск"
+
+#: templates/inc/nav.html:43
+msgid "Create"
+msgstr "Создать"
+
+#: templates/inc/nav.html:49
+msgid "Book"
+msgstr "Книгу"
+
+#: templates/inc/nav.html:54
+msgid "Author"
+msgstr "Автора"
+
+#: templates/inc/nav.html:59
+msgid "Genre"
+msgstr "Жанр"
+
+#: templates/inc/nav.html:64
+msgid "Translator"
+msgstr "Переводчика"
+
+#: templates/inc/nav.html:71
+msgid "Admin panel"
+msgstr "Админ панель"
+
+#: templates/inc/nav.html:76
+msgid "Sign out"
+msgstr "Выход"
+
+#: templates/inc/nav.html:78 templates/registration/login.html:4
+#: templates/registration/login.html:11
+#: templates/registration/password_reset_complete.html:7
+#: templates/registration/signup.html:12
+msgid "Sign in"
+msgstr "Вход"
+
+#: templates/inc/nav.html:79 templates/registration/signup.html:4
+#: templates/registration/signup.html:8
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: templates/registration/activate_account.html:4
+#, python-format
+msgid "Hey"
+msgstr "Привет"
+
+#: templates/registration/activate_account.html:5
+msgid "We noticed you just sign up on our website"
+msgstr "Мы заметили, что вы просто зарегистрировались на нашем сайте"
+
+#: templates/registration/activate_account.html:6
+msgid ""
+"Please <strong>confirm your email address</strong> and activate your account"
+msgstr "Пожалуйста, <strong>подтвердите свой адрес электронной почты</strong> и активируйте свой аккаунт"
+
+#: templates/registration/activate_account_invalid.html:4
+msgid "This email confirmation link has expired or is invalid."
+msgstr "This email confirmation link has expired or is invalid."
+
+#: templates/registration/check_email.html:4
+#: templates/registration/check_email.html:7
+msgid "Verify your email address"
+msgstr "Проверьте свой адрес электронной почты"
+
+#: templates/registration/check_email.html:9
+msgid ""
+"We have sent you an email for verification. Follow the link provided to "
+"complete the registration process. If you don't see the verification email "
+"in your main mailbox, check your spam folder."
+msgstr ""
+"Мы отправили вам электронное письмо для проверки. Перейдите по указанной ссылке, чтобы "
+"завершить процесс регистрации. Если вы не видите письмо для проверки "
+"в вашем основном почтовом ящике, проверьте папку спама."
+
+#: templates/registration/login.html:9
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+#: templates/registration/login.html:15
+msgid "No account? "
+msgstr "Нет аккаунта? "
+
+#: templates/registration/login.html:15
+msgid "Create an account"
+msgstr "Создайте аккаунт"
+
+#: templates/registration/password_reset_complete.html:5
+msgid ""
+"Password recovery completed. Your password has been saved. You may now sign in."
+msgstr "Восстановление пароля завершено. Ваш пароль был сохранен. Теперь вы можете войти в систему."
+
+#: templates/registration/password_reset_confirm.html:4
+msgid "Enter new password"
+msgstr "Введите новый пароль"
+
+#: templates/registration/password_reset_confirm.html:7
+msgid "Confirm"
+msgstr "Подтвердить"
+
+#: templates/registration/password_reset_done.html:5
+msgid ""
+"We’ve emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly. If you "
+"don’t receive an email, please make sure you’ve entered the address you "
+"entered in your profile, and check your spam folder."
+msgstr ""
+"Мы отправили вам по электронной почте инструкции по установке пароля, если учетная запись "
+"существует с введенным вами электронным адресом. Вы должны получить их в ближайшее время. Если вы "
+"не получили письмо, пожалуйста, убедитесь, что вы ввели адрес, который вы "
+"указали в профиле, и проверьте папку спама."
+
+#: templates/registration/password_reset_form.html:4
+msgid "Password reset"
+msgstr "Сброс пароля"
+
+#: templates/registration/password_reset_form.html:8
+msgid "Reset"
+msgstr "Сброс"
+
+#: templates/registration/signup.html:12
+msgid "Have an account? "
+msgstr "Есть аккаунт? "
+
+#: templates/registration/success.html:4
+msgid "Success"
+msgstr "Успешно"
+
+#: templates/registration/success.html:7
+msgid "Congrats! you just verified your account"
+msgstr "Поздравляем! Вы подтвердили свой аккаунт"
+
+#: users/forms.py:16
+msgid "Enter a valid email address"
+msgstr "Введите правильный адрес электронной почты"
+
+#: users/models.py:7
+msgid "email address"
+msgstr "адрес электронной почты"

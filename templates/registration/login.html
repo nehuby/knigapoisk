@@ -1,0 +1,17 @@
+{% extends "card.html" %}
+{% load i18n crispy_forms_tags %}
+{% block card_body %}
+  <div class="fs-3 text-center">{% trans "Sign in" %}</div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="mb-3">
+      <a href="{% url 'password_reset_form' %}">{% trans "Forgot password?" %}</a>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">{% trans "Sign in" %}</button>
+  </form>
+  <hr/>
+  <div class="text-center">
+    {% trans "No account? " %}<a href="{% url 'signup' %}">{% trans "Create an account" %}</a>
+  </div>
+{% endblock card_body %}

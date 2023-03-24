@@ -1,0 +1,35 @@
+{% extends "card.html" %}
+{% load i18n crispy_forms_tags static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/scroll.css' %}"/>
+{% endblock css %}
+{% block title %}
+  {% trans "Edit book" %}
+{% endblock title %}
+{% block card_body %}
+  <div class="fs-3 text-center">{% trans "Edit book" %}</div>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.name|as_crispy_field }}
+    {{ form.description|as_crispy_field }}
+    <label class="form-label">
+      {% blocktranslate with author=form.authors|pluralize %}Author{{ author }}:{% endblocktranslate %}
+    </label>
+    <div class="scroll">{{ form.authors|as_crispy_field }}</div>
+    <label class="form-label mt-3">
+      {% blocktranslate with genre=form.genres|pluralize %}Genre{{ genre }}:{% endblocktranslate %}
+    </label>
+    <div class="scroll">{{ form.genres|as_crispy_field }}</div>
+    {{ form.year_of_publication|as_crispy_field }}
+    {{ form.number_of_pages|as_crispy_field }}
+    {{ form.language|as_crispy_field }}
+    <label class="form-label">
+      {% blocktranslate with translator=form.translators|pluralize %}Translator{{ translator }}:{% endblocktranslate %}
+    </label>
+    <div class="scroll">{{ form.translators|as_crispy_field }}</div>
+    {{ form.photo|as_crispy_field }}
+    <div class="text-end">
+      <button class="btn btn-primary w-100">{% trans "Save" %}</button>
+    </div>
+  </form>
+{% endblock card_body %}
