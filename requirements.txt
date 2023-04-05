@@ -10,6 +10,6 @@ crispy-bootstrap5 == 0.7
 black == 23.3.0
 isort == 5.12.0
 djlint == 1.19.16
-django-debug-toolbar == 3.8.1
+django-debug-toolbar == 4.0.0
 mypy == 1.1.1
 django-stubs == 1.16.0
