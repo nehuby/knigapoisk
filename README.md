@@ -4,8 +4,6 @@
 
 Оnline book service written in Django Framework.
 
-## What can users do?
-
 ## Installation
 
 [Install `Docker Compose`](https://docs.docker.com/compose/install/).

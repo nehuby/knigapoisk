@@ -52,11 +52,11 @@ INSTALLED_APPS = [
     "django.contrib.postgres",
     "rest_framework",
     "debug_toolbar",
-    "django_cleanup.apps.CleanupConfig",
     "crispy_forms",
     "crispy_bootstrap5",
     "users.apps.UsersConfig",
     "books.apps.BooksConfig",
+    "django_cleanup.apps.CleanupConfig",
 ]
 
 
