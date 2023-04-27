@@ -12,4 +12,4 @@ isort == 5.12.0
 djlint == 1.23.3
 django-debug-toolbar == 4.0.0
 mypy == 1.2.0
-django-stubs == 1.16.0
+django-stubs == 4.2.0
