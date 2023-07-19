@@ -9,7 +9,7 @@ django-crispy-forms == 2.0
 crispy-bootstrap5 == 0.7
 black == 23.3.0
 isort == 5.12.0
-djlint == 1.31.1
+djlint == 1.32.0
 django-debug-toolbar == 4.1.0
 mypy == 1.4.1
 django-stubs == 4.2.3
