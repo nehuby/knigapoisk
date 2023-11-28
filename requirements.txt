@@ -1,7 +1,7 @@
 Django == 4.2.6
 djangorestframework == 3.14.0
 django-environ==0.10.0
-django-stubs-ext == 4.2.2
+django-stubs-ext == 4.2.5
 django-cleanup == 8.0.0
 psycopg2-binary == 2.9.6
 Pillow == 9.5.0
